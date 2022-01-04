@@ -1,0 +1,277 @@
+{
+	"compiler": {
+		"version": "0.8.4+commit.c7e474f2"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "newContract",
+						"type": "address"
+					}
+				],
+				"name": "ContractUpgrade",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "ceoAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "cfoAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "cooAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "pause",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "paused",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newCEO",
+						"type": "address"
+					}
+				],
+				"name": "setCEO",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newCFO",
+						"type": "address"
+					}
+				],
+				"name": "setCFO",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newCOO",
+						"type": "address"
+					}
+				],
+				"name": "setCOO",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_spawner",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "_whitelisted",
+						"type": "bool"
+					}
+				],
+				"name": "setSpawner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_manager",
+						"type": "address"
+					}
+				],
+				"name": "setSpawningManager",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "spawningManager",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "unpause",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "whitelistedSpawner",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"events": {
+				"ContractUpgrade(address)": {
+					"details": "Emited when contract is upgraded - See README.md for updgrade plan"
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"pause()": {
+					"details": "Called by any \"C-level\" role to pause the contract. Used only when  a bug or exploit is detected and we need to limit damage."
+				},
+				"setCEO(address)": {
+					"details": "Assigns a new address to act as the CEO. Only available to the current CEO.",
+					"params": {
+						"_newCEO": "The address of the new CEO"
+					}
+				},
+				"setCFO(address)": {
+					"details": "Assigns a new address to act as the CFO. Only available to the current CEO.",
+					"params": {
+						"_newCFO": "The address of the new CFO"
+					}
+				},
+				"setCOO(address)": {
+					"details": "Assigns a new address to act as the COO. Only available to the current CEO.",
+					"params": {
+						"_newCOO": "The address of the new COO"
+					}
+				},
+				"unpause()": {
+					"details": "Unpauses the smart contract. Can only be called by the CEO, since  one reason we may pause the contract is when CFO or COO accounts are  compromised."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"unpause()": {
+					"notice": "This is public rather than external so it can be called by  derived contracts."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/core/erc721_upgradeable/DinosAccessControl.sol": "DinosAccessControl"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/access/Ownable.sol": {
+			"keccak256": "0x6bb804a310218875e89d12c053e94a13a4607cdf7cc2052f3e52bd32a0dc50a1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b2ebbbe6d0011175bd9e7268b83de3f9c2f9d8d4cbfbaef12aff977d7d727163",
+				"dweb:/ipfs/Qmd5c7Vxtis9wzkDNhxwc6A2QT5H9xn9kfjhx7qx44vpro"
+			]
+		},
+		"@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0x95098bd1d9c8dec4d80d3dedb88a0d949fa0d740ee99f2aa466bc308216ca6d5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7fec968dcd68e13961521fa3c7dd87baecad91a2653b19240e81f21cc4f3ba85",
+				"dweb:/ipfs/QmaXtsYt4Mphm8XHNUfk2me1cF3ssS2SqDBNFpYAzMjomC"
+			]
+		},
+		"contracts/core/erc721_upgradeable/DinosAccessControl.sol": {
+			"keccak256": "0xf4a64db534748c4f69604dabcc667886a73e76a6ffc9fa6a331a28aa102c7e57",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://468bab580ec5be4f33374875e1ab6deb0912c2001a4556430e198039ecda7cd7",
+				"dweb:/ipfs/QmbQEdCsNNX3imha5SDGu4TdsantJyiYDDC1X5ENvQ7dNf"
+			]
+		}
+	},
+	"version": 1
+}

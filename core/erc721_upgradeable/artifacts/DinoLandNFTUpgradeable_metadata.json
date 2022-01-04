@@ -1,0 +1,1139 @@
+{
+	"compiler": {
+		"version": "0.8.4+commit.c7e474f2"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "approved",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "Approval",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "operator",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "approved",
+						"type": "bool"
+					}
+				],
+				"name": "ApprovalForAll",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "newContract",
+						"type": "address"
+					}
+				],
+				"name": "ContractUpgrade",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "_dinoId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_oldGenes",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_newGenes",
+						"type": "uint256"
+					}
+				],
+				"name": "DinoEvolved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "_dinoId",
+						"type": "uint256"
+					}
+				],
+				"name": "DinoRetired",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "_dinoId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_genes",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint128",
+						"name": "_gender",
+						"type": "uint128"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint128",
+						"name": "_generation",
+						"type": "uint128"
+					}
+				],
+				"name": "DinoSpawned",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "_dinoId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_oldOwner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_newOwner",
+						"type": "address"
+					}
+				],
+				"name": "DinoTransfered",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "_dinoId",
+						"type": "uint256"
+					}
+				],
+				"name": "DinoUpdated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "Transfer",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "approve",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "ceoAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "cfoAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "cooAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_genes",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					},
+					{
+						"internalType": "uint128",
+						"name": "_gender",
+						"type": "uint128"
+					},
+					{
+						"internalType": "uint128",
+						"name": "_generation",
+						"type": "uint128"
+					}
+				],
+				"name": "createDino",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_dinoId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_newGenes",
+						"type": "uint256"
+					}
+				],
+				"name": "evolveDino",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "getApproved",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_dinoId",
+						"type": "uint256"
+					}
+				],
+				"name": "getDino",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "genes",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "bornAt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "cooldownEndAt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint128",
+						"name": "gender",
+						"type": "uint128"
+					},
+					{
+						"internalType": "uint128",
+						"name": "generation",
+						"type": "uint128"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_ownerAddress",
+						"type": "address"
+					}
+				],
+				"name": "getDinosByOwner",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "initialize",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "operator",
+						"type": "address"
+					}
+				],
+				"name": "isApprovedForAll",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "ownerOf",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "pause",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "paused",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_dinoId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "_rip",
+						"type": "bool"
+					}
+				],
+				"name": "retireDino",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "safeTransferFrom",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_dinoId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_data",
+						"type": "bytes"
+					}
+				],
+				"name": "safeTransferFrom",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "operator",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "approved",
+						"type": "bool"
+					}
+				],
+				"name": "setApprovalForAll",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newCEO",
+						"type": "address"
+					}
+				],
+				"name": "setCEO",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newCFO",
+						"type": "address"
+					}
+				],
+				"name": "setCFO",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newCOO",
+						"type": "address"
+					}
+				],
+				"name": "setCOO",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_dnlStorageExtension",
+						"type": "string"
+					}
+				],
+				"name": "setDNLStorageExtension",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_dnlStorageURI",
+						"type": "string"
+					}
+				],
+				"name": "setDNLStorageURI",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_spawner",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "_whitelisted",
+						"type": "bool"
+					}
+				],
+				"name": "setSpawner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_manager",
+						"type": "address"
+					}
+				],
+				"name": "setSpawningManager",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "spawningManager",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "interfaceId",
+						"type": "bytes4"
+					}
+				],
+				"name": "supportsInterface",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "symbol",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_dinoId",
+						"type": "uint256"
+					}
+				],
+				"name": "tokenURI",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalSupply",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_dinoId",
+						"type": "uint256"
+					}
+				],
+				"name": "transferFrom",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "unpause",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_dinoId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_newGenes",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint128",
+						"name": "_newGender",
+						"type": "uint128"
+					},
+					{
+						"internalType": "uint128",
+						"name": "_newGeneration",
+						"type": "uint128"
+					}
+				],
+				"name": "updateDino",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "whitelistedSpawner",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"events": {
+				"DinoEvolved(uint256,uint256,uint256)": {
+					"details": "The DinoRetired event is fired whenever a new dino elvolved."
+				},
+				"DinoRetired(uint256)": {
+					"details": "The DinoRetired event is fired whenever a new dino retired."
+				},
+				"DinoSpawned(uint256,address,uint256,uint128,uint128)": {
+					"details": "The DinoSpawned event is fired whenever a new dino comes into existence."
+				},
+				"DinoTransfered(uint256,address,address)": {
+					"details": "The DinoRetired event is fired whenever a dino has been transfered."
+				},
+				"DinoUpdated(uint256)": {
+					"details": "The DinoRetired event is fired whenever a dino has been updated."
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"approve(address,uint256)": {
+					"details": "See {IERC721-approve}."
+				},
+				"balanceOf(address)": {
+					"details": "See {IERC721-balanceOf}."
+				},
+				"createDino(uint256,address,uint128,uint128)": {
+					"details": "An external method that creates a new dino and stores it. Only be called by spawners",
+					"params": {
+						"_gender": "The dino's gender 1 stand for Male and 2 for Female",
+						"_generation": "The generation number of this dino, must be computed by caller.",
+						"_genes": "The dino's genes code.",
+						"_owner": "The inital owner of this dino, must be non-zero."
+					}
+				},
+				"evolveDino(uint256,uint256)": {
+					"details": "An external method that allow spawner to evolve a dino and assign new genes to him. Only be called by spawners",
+					"params": {
+						"_dinoId": "The dino's ID",
+						"_newGenes": "Dino's new genes"
+					}
+				},
+				"getApproved(uint256)": {
+					"details": "See {IERC721-getApproved}."
+				},
+				"getDino(uint256)": {
+					"details": "An external method to get dino information by Dino ID",
+					"params": {
+						"_dinoId": "The id of specific dino that you want to get information"
+					}
+				},
+				"getDinosByOwner(address)": {
+					"details": "An external method to get dino ids list by owner Address",
+					"params": {
+						"_ownerAddress": "The owner address we want to get dino list"
+					}
+				},
+				"initialize()": {
+					"details": "Init contract with some specific information and some genesis dinos."
+				},
+				"isApprovedForAll(address,address)": {
+					"details": "See {IERC721-isApprovedForAll}."
+				},
+				"name()": {
+					"details": "See {IERC721Metadata-name}."
+				},
+				"ownerOf(uint256)": {
+					"details": "See {IERC721-ownerOf}."
+				},
+				"pause()": {
+					"details": "Called by any \"C-level\" role to pause the contract. Used only when  a bug or exploit is detected and we need to limit damage."
+				},
+				"retireDino(uint256,bool)": {
+					"details": "An external method that allow spawner to retire a dino. Only be called by spawners",
+					"params": {
+						"_dinoId": "The dino's ID",
+						"_rip": "Retire this dino or not"
+					}
+				},
+				"safeTransferFrom(address,address,uint256)": {
+					"details": "See {IERC721-safeTransferFrom}."
+				},
+				"safeTransferFrom(address,address,uint256,bytes)": {
+					"details": "Assigns ownership of a specific Dino to from an address to another address."
+				},
+				"setApprovalForAll(address,bool)": {
+					"details": "See {IERC721-setApprovalForAll}."
+				},
+				"setCEO(address)": {
+					"details": "Assigns a new address to act as the CEO. Only available to the current CEO.",
+					"params": {
+						"_newCEO": "The address of the new CEO"
+					}
+				},
+				"setCFO(address)": {
+					"details": "Assigns a new address to act as the CFO. Only available to the current CEO.",
+					"params": {
+						"_newCFO": "The address of the new CFO"
+					}
+				},
+				"setCOO(address)": {
+					"details": "Assigns a new address to act as the COO. Only available to the current CEO.",
+					"params": {
+						"_newCOO": "The address of the new COO"
+					}
+				},
+				"setDNLStorageExtension(string)": {
+					"details": "An external method that allow CLevel to set dnlStorageExtenstion value",
+					"params": {
+						"_dnlStorageExtension": "Storage Extension of Dinoland Project, default is json"
+					}
+				},
+				"setDNLStorageURI(string)": {
+					"details": "An external method that allow CLevel to set storage dnlStorageURI value",
+					"params": {
+						"_dnlStorageURI": "Storage URI of Dinoland Project"
+					}
+				},
+				"supportsInterface(bytes4)": {
+					"details": "See {IERC165-supportsInterface}."
+				},
+				"symbol()": {
+					"details": "See {IERC721Metadata-symbol}."
+				},
+				"totalSupply()": {
+					"details": "An external method that returns total Dino be stored in the contract."
+				},
+				"transferFrom(address,address,uint256)": {
+					"details": "Assigns ownership of a specific Dino to from an address to another address."
+				},
+				"unpause()": {
+					"details": "Unpauses the smart contract. Can only be called by the CEO, since  one reason we may pause the contract is when CFO or COO accounts are  compromised."
+				},
+				"updateDino(uint256,uint256,uint128,uint128)": {
+					"details": "An external method that allow spawner to update a dino's information. Only be called by spawners",
+					"params": {
+						"_dinoId": "The dino's ID",
+						"_newGender": "Dino's new gender",
+						"_newGeneration": "Dino's new generation",
+						"_newGenes": "Dino's new genes"
+					}
+				}
+			},
+			"stateVariables": {
+				"dinos": {
+					"details": "An array containing the Dino struct for all Dinos in existence. The ID  of each dino is actually an index into this array."
+				},
+				"dnlStorageURI": {
+					"details": "URI of the server contains dino's information."
+				},
+				"userOwnedDinos": {
+					"details": "A mapping from the owner to their cats."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"unpause()": {
+					"notice": "This is public rather than external so it can be called by  derived contracts."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/core/erc721_upgradeable/DinolandNFTUpgradeable.sol": "DinolandNFTUpgradeable"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
+			"keccak256": "0x8b2abd85d0ece7e866e100e9d47ca9cbec93c87cf71a8d267b2b93eb81f7d5e9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fe9fa1beb63e4a09637701f783982ba80380d630d600c9cafe26b68bf58be1b2",
+				"dweb:/ipfs/QmRA3GXhTWys88joD9x8xYhdjzvGwmDGLMMzGw3LxbSEge"
+			]
+		},
+		"@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol": {
+			"keccak256": "0x56f89378fca44345fe8de632c70311052c39d64a7a710513316676d343380e68",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d22f9bc8244dac77e7ad006ca89747592dcf9c5d181f18aecc6b13f5191b8636",
+				"dweb:/ipfs/QmWf2BMCs8CSycNJj633v6u85uRzSnvC5uo6iPgCfwyG7T"
+			]
+		},
+		"@openzeppelin/contracts-upgradeable/token/ERC721/IERC721ReceiverUpgradeable.sol": {
+			"keccak256": "0x3d03f5cb8b9f17b75c3b6eb4921b1fe7b87ed77cf0c8638496eee5183a5101e0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5de186747a6b768851aeae14d616aeda91063e6f2330e735c4b83f6f1d8495d7",
+				"dweb:/ipfs/QmWwSX9NKRS6qtQoKyS6S6HHmJ6kHhuar3LwssrejDMAMz"
+			]
+		},
+		"@openzeppelin/contracts-upgradeable/token/ERC721/IERC721Upgradeable.sol": {
+			"keccak256": "0xfbb3ca7272af58dc245a20e91a1f68481ee04706fa3fe46d184000efc21f4bad",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://038cad5fc2950820d94eead6323b56c3b95442aaa91a62c648fbde3256208ef5",
+				"dweb:/ipfs/QmUkfnMmgc5gt6Dj99TkYEwUuRcPqBpm4qnxb71mqj6Qep"
+			]
+		},
+		"@openzeppelin/contracts-upgradeable/token/ERC721/extensions/IERC721MetadataUpgradeable.sol": {
+			"keccak256": "0x6dd43e44dbaad99d1863be7f2837085f361efdcb1fde5a9bf84c4efa07f89ed3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bf7a5b97df8bb8abe1bceadd1c5ff55b334771182a237a358fd34e97b4ed6099",
+				"dweb:/ipfs/QmfSGdYENk98pogMEBV4tzu4vUd6aFb2jFrBYfFNxbqQzz"
+			]
+		},
+		"@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol": {
+			"keccak256": "0x946f08c0a132c5877d458d7af7956da60607f20a5c03dd75760708c848aae6b7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3b80d20ed113ad0be486d489e1cc2f0f4006b7893e579c2156e8c434d8eec382",
+				"dweb:/ipfs/QmdB8QGghkRGcSkp4xAWCvohGgYXFU9ncMx82XSqDMiZJf"
+			]
+		},
+		"@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol": {
+			"keccak256": "0x062b5a0f7cc6b0528fa350033759f3a15ba42afb57423d7c593753860f2c82e0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b3c8b4ec819fc9648ef5ae6b8edc474b2a631389fa73add4c4545e1918abe034",
+				"dweb:/ipfs/Qmc8GzvTtCxR3mg3QuLRzycSMfsSjjZPyPALmLBjMxSGv6"
+			]
+		},
+		"@openzeppelin/contracts-upgradeable/utils/StringsUpgradeable.sol": {
+			"keccak256": "0xc7af08df3d3e818ce36f95aa879c13245772fed21b553e6033292ea4edc2a9f3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://639c22bcf1ba4c783016c3eed1d9b546444feecb917a67201d66b6762df0b8a2",
+				"dweb:/ipfs/QmebyzSijf6BPXaXLHcJPZnPpLk48UW1esmUTEoGd4hHkv"
+			]
+		},
+		"@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol": {
+			"keccak256": "0x17c9c5d2d6b56527215ee7b3da6dde66b6f23f1b3d5c66cc436e753ef349a97a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://dd7c775bc6000f44c048796b5e013dbb3ec7592986bc289868b19ff9439ee31d",
+				"dweb:/ipfs/QmSuBfTT9z9sEpmEcGihEc5DJGsXery8QyyuNfvub875ej"
+			]
+		},
+		"@openzeppelin/contracts-upgradeable/utils/introspection/IERC165Upgradeable.sol": {
+			"keccak256": "0x1c4860acd323e34a67b3e97faab9aaa55fe8e92b1dcf08b5f47f3468d58ce75c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3c2746f8ebb4bfb6b8e8a768296c7f85f11b36f4873daabb91933c3602f00590",
+				"dweb:/ipfs/QmdumDez8WEdk9FDuP7Jp5pDSJiQeFtFSJw3B5CEHJL4KU"
+			]
+		},
+		"@openzeppelin/contracts/access/Ownable.sol": {
+			"keccak256": "0x6bb804a310218875e89d12c053e94a13a4607cdf7cc2052f3e52bd32a0dc50a1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b2ebbbe6d0011175bd9e7268b83de3f9c2f9d8d4cbfbaef12aff977d7d727163",
+				"dweb:/ipfs/Qmd5c7Vxtis9wzkDNhxwc6A2QT5H9xn9kfjhx7qx44vpro"
+			]
+		},
+		"@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0x95098bd1d9c8dec4d80d3dedb88a0d949fa0d740ee99f2aa466bc308216ca6d5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7fec968dcd68e13961521fa3c7dd87baecad91a2653b19240e81f21cc4f3ba85",
+				"dweb:/ipfs/QmaXtsYt4Mphm8XHNUfk2me1cF3ssS2SqDBNFpYAzMjomC"
+			]
+		},
+		"@openzeppelin/contracts/utils/Strings.sol": {
+			"keccak256": "0x391d3ba97ab6856a16b225d6ee29617ad15ff00db70f3b4df1ab5ea33aa47c9d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d636ba90bbbeed04a1ea7fe9ec2466757e30fd38ba2ca173636dbf69a518735e",
+				"dweb:/ipfs/QmQwCB2BHnEuYR22PYt9HkpbgeFDhq4rHmaYqAZbX3WRC7"
+			]
+		},
+		"contracts/core/erc721_upgradeable/DinolandNFTUpgradeable.sol": {
+			"keccak256": "0x6556c28bff4ba1d048be426762baea0f139d3aea20ddbc1707bc4dff3f7b7c4d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a929a714d86434701676cc19cf145ec23e05a6514bcab30d1f2b329a0758f975",
+				"dweb:/ipfs/QmbgVWNNQKGDuTHWQM7DLPTz81JHaCPpVWr5BaDQJNUT7c"
+			]
+		},
+		"contracts/core/erc721_upgradeable/DinosAccessControl.sol": {
+			"keccak256": "0xf4a64db534748c4f69604dabcc667886a73e76a6ffc9fa6a331a28aa102c7e57",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://468bab580ec5be4f33374875e1ab6deb0912c2001a4556430e198039ecda7cd7",
+				"dweb:/ipfs/QmbQEdCsNNX3imha5SDGu4TdsantJyiYDDC1X5ENvQ7dNf"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,96 @@
+{
+	"compiler": {
+		"version": "0.8.4+commit.c7e474f2"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_genes",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					},
+					{
+						"internalType": "uint128",
+						"name": "_gender",
+						"type": "uint128"
+					},
+					{
+						"internalType": "uint128",
+						"name": "_generation",
+						"type": "uint128"
+					}
+				],
+				"name": "createDino",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/game_manager/GameManager.sol": "IDinolandNFT"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/access/Ownable.sol": {
+			"keccak256": "0x6bb804a310218875e89d12c053e94a13a4607cdf7cc2052f3e52bd32a0dc50a1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b2ebbbe6d0011175bd9e7268b83de3f9c2f9d8d4cbfbaef12aff977d7d727163",
+				"dweb:/ipfs/Qmd5c7Vxtis9wzkDNhxwc6A2QT5H9xn9kfjhx7qx44vpro"
+			]
+		},
+		"@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0x95098bd1d9c8dec4d80d3dedb88a0d949fa0d740ee99f2aa466bc308216ca6d5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7fec968dcd68e13961521fa3c7dd87baecad91a2653b19240e81f21cc4f3ba85",
+				"dweb:/ipfs/QmaXtsYt4Mphm8XHNUfk2me1cF3ssS2SqDBNFpYAzMjomC"
+			]
+		},
+		"contracts/game_manager/GameManager.sol": {
+			"keccak256": "0xb8c122ae928e67d2a4979fb9b0f038aa2bcf1d7fef795f6f999676fb5f811502",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9512515ab0fdad3c5b934e67b5152c3d680445bb306bc86c262d0cfc35034635",
+				"dweb:/ipfs/QmWLPoQ1e4B1tnhmTAVmkXpxrX9TLZHhf5ujTYUByEAED7"
+			]
+		}
+	},
+	"version": 1
+}

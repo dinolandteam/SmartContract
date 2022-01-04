@@ -1,0 +1,710 @@
+{
+	"compiler": {
+		"version": "0.8.4+commit.c7e474f2"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_ownerCut",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_tokenAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_nftAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "AuctionCancelled",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_startingPrice",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_endingPrice",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_duration",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_seller",
+						"type": "address"
+					}
+				],
+				"name": "AuctionCreated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_totalPrice",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_winner",
+						"type": "address"
+					}
+				],
+				"name": "AuctionSuccessful",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "Paused",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "Unpaused",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "adminAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "auctions",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "seller",
+						"type": "address"
+					},
+					{
+						"internalType": "uint128",
+						"name": "startingPrice",
+						"type": "uint128"
+					},
+					{
+						"internalType": "uint128",
+						"name": "endingPrice",
+						"type": "uint128"
+					},
+					{
+						"internalType": "uint64",
+						"name": "duration",
+						"type": "uint64"
+					},
+					{
+						"internalType": "uint64",
+						"name": "startedAt",
+						"type": "uint64"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "bid",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "cancelAuction",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_nftAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "cancelAuctionWhenPaused",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_startingPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_endingPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_duration",
+						"type": "uint256"
+					}
+				],
+				"name": "createAuction",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "getAuction",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "seller",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startingPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "endingPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "duration",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startedAt",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "getCurrentPrice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getMarketManagerBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "nftAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "ownerCut",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "paused",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newAdminAddress",
+						"type": "address"
+					}
+				],
+				"name": "setAdminAddress",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newNftAddress",
+						"type": "address"
+					}
+				],
+				"name": "setNftAddress",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newTokenAddress",
+						"type": "address"
+					}
+				],
+				"name": "setTokenAddress",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "tokenAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "transferToMarketManager",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					}
+				],
+				"name": "withdrawAllBalance",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdrawBalance",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"bid(uint256,uint256)": {
+					"details": "Bids on an open auction, completing the auction and transferring  ownership of the NFT if enough Ether is supplied.  the Nonfungible Interface.",
+					"params": {
+						"_tokenId": "- ID of token to bid on."
+					}
+				},
+				"cancelAuction(uint256)": {
+					"details": "Cancels an auction that hasn't been won yet.  Returns the NFT to original owner.",
+					"params": {
+						"_tokenId": "- ID of token on auction"
+					}
+				},
+				"cancelAuctionWhenPaused(address,uint256)": {
+					"details": "Cancels an auction when the contract is paused.  Only the owner may do this, and NFTs are returned to  the seller. This should only be used in emergencies.",
+					"params": {
+						"_nftAddress": "- Address of the NFT.",
+						"_tokenId": "- ID of the NFT on auction to cancel."
+					}
+				},
+				"constructor": {
+					"details": "Constructor creates a reference to the NFT ownership contract  and verifies the owner cut is in the valid range.",
+					"params": {
+						"_ownerCut": "- percent cut the owner takes on each auction, must be  between 0-10,000."
+					}
+				},
+				"createAuction(uint256,uint256,uint256,uint256)": {
+					"details": "Creates and begins a new auction.  the Nonfungible Interface.",
+					"params": {
+						"_duration": "- Length of time to move between starting  price and ending price (in seconds).",
+						"_endingPrice": "- Price of item (in wei) at end of auction.",
+						"_startingPrice": "- Price of item (in wei) at beginning of auction.",
+						"_tokenId": "- ID of token to auction, sender must be owner."
+					}
+				},
+				"getAuction(uint256)": {
+					"details": "Returns auction info for an NFT on auction.",
+					"params": {
+						"_tokenId": "- ID of NFT on auction."
+					}
+				},
+				"getCurrentPrice(uint256)": {
+					"details": "Returns the current price of an auction.",
+					"params": {
+						"_tokenId": "- ID of the token price we are checking."
+					}
+				},
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"paused()": {
+					"details": "Returns true if the contract is paused, and false otherwise."
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+				},
+				"setNftAddress(address)": {
+					"details": "Set new nft address",
+					"params": {
+						"_newNftAddress": "- Address of new erc721 token."
+					}
+				},
+				"setTokenAddress(address)": {
+					"details": "Set new token address",
+					"params": {
+						"_newTokenAddress": "- Address of new erc20 token."
+					}
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"cancelAuction(uint256)": {
+					"notice": "This is a state-modifying function that can  be called while the contract is paused."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"marketplace/DinoMarketplace.sol": "DinoMarket"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"marketplace/Context.sol": {
+			"keccak256": "0x90565a39ae45c80f0468dc96c7b20d0afc3055f344c8203a0c9258239f350b9f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://26e8b38a7ac8e7b4463af00cf7fff1bf48ae9875765bf4f7751e100124d0bc8c",
+				"dweb:/ipfs/QmWcsmkVr24xmmjfnBQZoemFniXjj3vwT78Cz6uqZW1Hux"
+			]
+		},
+		"marketplace/DinoMarketplace.sol": {
+			"keccak256": "0xfcb8e11684127817c3276cfbded36dfe9cfacdcadd3ec4cd94e1242bf51a84b1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4e749ae4341d73191cfb0cd22f89df677a9d4d96b85cadf12200cb52fb0d2596",
+				"dweb:/ipfs/QmSmcPtm8P6n2Fy7ncYn25QmKrqro2gNaDYNtypaAm3uTx"
+			]
+		},
+		"marketplace/IERC165.sol": {
+			"keccak256": "0xa28007762d9da9db878dd421960c8cb9a10471f47ab5c1b3309bfe48e9e79ff4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://796ab6e88af7bf0e78def0f059310c903af6a312b565344e0ff524a0f26e81c6",
+				"dweb:/ipfs/QmcsVgLgzWdor3UnAztUkXKNGcysm1MPneWksF72AvnwBx"
+			]
+		},
+		"marketplace/IERC20.sol": {
+			"keccak256": "0x027b891937d20ccf213fdb9c31531574256de774bda99d3a70ecef6e1913ed2a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://087318b21c528119f649899f5b5580566dd8d7b0303d4904bd0e8580c3545f14",
+				"dweb:/ipfs/Qmbn5Mj7aUn8hJuQ8VrQjjEXRsXyJKykgnjR9p4C3nfLtL"
+			]
+		},
+		"marketplace/IERC721.sol": {
+			"keccak256": "0xe0e811a90fa8c9179bb9b44606f477f6c3a2243708ddeaa9156cc3ae8004239c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://442efef5eea5e2e0cd21be0a8ca68fa296e5759ae9acdeeb62c1a6a0e762f799",
+				"dweb:/ipfs/QmTXP4rpJBHSwMrjyhXUEqv8UQ8YiLuemSzhS6XpR3SWNz"
+			]
+		},
+		"marketplace/Ownable.sol": {
+			"keccak256": "0x75d1e6250c190ca0500e5a2b7def5e5d6fd3edbe368a6de93dea256471d04593",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://09b8acacbbc0353985940f90022a8e15d15d9767e1eeaa721e1e21655c34c62e",
+				"dweb:/ipfs/Qmeb2CejPutKdfNpncsRny8cibhF7aVMJpR6ZvMYruDWLM"
+			]
+		},
+		"marketplace/Pausable.sol": {
+			"keccak256": "0x4df1f94aa17af2baf81228338754bc024641bb3f3df88e3484b175f36d4ece53",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a34b9b81ae5427e4131d0f97e3e702e2994654377cc80f44053a5f78f760727c",
+				"dweb:/ipfs/QmUPXDmBz5sCPRCTw1Gpu87vLwB9keHNMB3Moq52mJjSkd"
+			]
+		}
+	},
+	"version": 1
+}

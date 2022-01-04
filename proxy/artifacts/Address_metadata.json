@@ -1,0 +1,46 @@
+{
+	"compiler": {
+		"version": "0.8.4+commit.c7e474f2"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Collection of functions related to the address type",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/proxy/MarketplaceTransparentUpgradeableProxy.sol": "Address"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/proxy/MarketplaceTransparentUpgradeableProxy.sol": {
+			"keccak256": "0x2c2e456b40bb306937cc5983f329264559827e868162fb2befb1f79ba5c0c995",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://85e8c3edbc5ece17de76f96662ba29dad3e0c52cc0432ba14edd1ca44d15dd2b",
+				"dweb:/ipfs/QmVeuyLVi93KRo3JNVPBcLoiWyBkoTThyPo7v6uWGy92nW"
+			]
+		}
+	},
+	"version": 1
+}

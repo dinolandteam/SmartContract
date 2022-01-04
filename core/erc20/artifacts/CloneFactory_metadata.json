@@ -1,0 +1,53 @@
+{
+	"compiler": {
+		"version": "0.8.4+commit.c7e474f2"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/core/erc20/TokenTimelock.sol": "CloneFactory"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0x027b891937d20ccf213fdb9c31531574256de774bda99d3a70ecef6e1913ed2a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://087318b21c528119f649899f5b5580566dd8d7b0303d4904bd0e8580c3545f14",
+				"dweb:/ipfs/Qmbn5Mj7aUn8hJuQ8VrQjjEXRsXyJKykgnjR9p4C3nfLtL"
+			]
+		},
+		"contracts/core/erc20/TokenTimelock.sol": {
+			"keccak256": "0xdc9a4d6964412e128ba271954ee42c93884c00bf9d55eb7c0cdb8fa791db502d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://438ddd83e9df68af0730ed4fcb2a0ac2841e3325646b4cf3d52b1fa2536bc2bf",
+				"dweb:/ipfs/QmSqU4Ehkypx7SCAjEBJucNbK7WbXhzaGv9UzfGHNh4o3X"
+			]
+		}
+	},
+	"version": 1
+}
